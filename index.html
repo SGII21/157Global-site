@@ -91,7 +91,8 @@
           body: JSON.stringify({ username, password })
         });
 
-        document.getElementById('loginResponse').innerText = "Unauthorized user.";
+        const result = await response.json();
+        document.getElementById('loginResponse').innerText = result.message || "Unauthorized user.";
       } catch (error) {
         document.getElementById('loginResponse').innerText = "Error submitting form.";
       }
