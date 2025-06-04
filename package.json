@@ -1,0 +1,11 @@
+{
+  "name": "157global-site",
+  "version": "1.0.0",
+  "description": "Static splash page for 157Global with login capture function",
+  "main": "index.html",
+  "scripts": {},
+  "dependencies": {
+    "node-mailjet": "^3.3.1"
+  },
+  "license": "MIT"
+}
