@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>157Global</title>
+  <title>157Global, LLC</title>
   <style>
     body {
       margin: 0;
@@ -14,8 +15,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
+      padding: 2em;
+      box-sizing: border-box;
     }
     h1 {
       font-size: 2.5em;
@@ -26,12 +29,18 @@
       font-size: 1.2em;
       color: #aaa;
       margin-bottom: 1.5em;
+      max-width: 800px;
+    }
+    p {
+      max-width: 600px;
+      margin-bottom: 2em;
     }
     form {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      width: 300px;
+      width: 100%;
+      max-width: 300px;
     }
     input {
       padding: 10px;
@@ -63,7 +72,7 @@
   </style>
 </head>
 <body>
-  <h1>157Global</h1>
+  <h1>157Global, LLC</h1>
   <h2>Strategic consulting backed by over 30 years of experience in confidential, high-impact operational execution across the U.S. and Europe.</h2>
   <p>All engagements are confidential and by referral only.</p>
 
@@ -75,7 +84,7 @@
 
   <p id="loginResponse"></p>
 
-  <footer>© 2025 157Global. All rights reserved.</footer>
+  <footer>© 2025 157Global, LLC. All rights reserved.</footer>
 
   <script>
     document.getElementById('loginForm').addEventListener('submit', async function (e) {
@@ -90,8 +99,7 @@
           body: JSON.stringify({ username, password })
         });
 
-        const result = await response.json();
-        document.getElementById('loginResponse').innerText = result.message || "Unauthorized user.";
+        document.getElementById('loginResponse').innerText = "Unauthorized user.";
       } catch (error) {
         document.getElementById('loginResponse').innerText = "Error submitting form.";
       }
