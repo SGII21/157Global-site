@@ -9,32 +9,43 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #1a1a1a;
+      background-color: #000;
       color: #d3d3d3;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      text-align: center;
-      padding: 2em;
+      padding: 20px;
       box-sizing: border-box;
+      text-align: center;
     }
+
     img.logo {
-      width: 240px;
+      max-width: 300px;
       height: auto;
       margin-bottom: 1em;
     }
+
+    h1 {
+      font-size: 1.5em;
+      color: #ccc;
+      margin-bottom: 0.2em;
+    }
+
     h2 {
-      font-size: 1.2em;
+      font-size: 1em;
       color: #aaa;
-      margin-bottom: 1.5em;
-      max-width: 800px;
-    }
-    p {
+      margin-bottom: 1em;
       max-width: 600px;
-      margin-bottom: 2em;
     }
+
+    p.subtext {
+      margin-bottom: 2em;
+      font-size: 0.9em;
+      color: #888;
+    }
+
     form {
       display: flex;
       flex-direction: column;
@@ -42,12 +53,14 @@
       width: 100%;
       max-width: 300px;
     }
+
     input {
       padding: 10px;
       font-size: 1em;
       border: none;
       border-radius: 4px;
     }
+
     button {
       padding: 10px;
       font-size: 1em;
@@ -57,24 +70,35 @@
       border-radius: 4px;
       cursor: pointer;
     }
+
     button:hover {
       background-color: #777;
     }
+
+    #loginResponse {
+      margin-top: 1em;
+      color: red;
+    }
+
     footer {
       margin-top: 3em;
       font-size: 0.9em;
       color: #666;
     }
-    #loginResponse {
-      margin-top: 1em;
-      color: red;
+
+    @media (max-width: 500px) {
+      h2 {
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="logo_157global.png" alt="157Global Logo" class="logo" />
+  <img src="logo_157Global_transparent.png" alt="157Global Logo" class="logo" />
+
+  <h1>Strategic Consulting</h1>
   <h2>Strategic consulting backed by over 30 years of experience in confidential, high-impact operational execution across the U.S. and Europe.</h2>
-  <p>All engagements are confidential and by referral only.</p>
+  <p class="subtext">All engagements are confidential and by referral only.</p>
 
   <form id="loginForm">
     <input type="text" id="username" name="username" placeholder="Username" required />
