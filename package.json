@@ -1,8 +1,0 @@
-{
-  "name": "157global-site",
-  "version": "1.0.0",
-  "description": "157Global login monitor using Mailjet",
-  "dependencies": {
-    "node-mailjet": "^3.3.1"
-  }
-}
